@@ -2,13 +2,13 @@
 
 <!-- This is the dog(1) man page, written in Markdown. -->
 <!-- To generate the roff version, run `just man`, -->
-<!-- and the man page will appear in the ‘target’ directory. -->
+<!-- and the man page will appear in the `target` directory. -->
 
 
 NAME
 ====
 
-dog — a command-line DNS client
+dog - a command-line DNS client
 
 
 SYNOPSIS
@@ -54,9 +54,9 @@ QUERY OPTIONS
 `--class=CLASS`
 : Network class of the DNS record being queried (`IN`, `CH`, `HS`)
 
-By default, dog will request A records using the system default resolver. At least one domain name must be passed — dog will not automatically query the root nameservers.
+By default, dog will request A records using the system default resolver. At least one domain name must be passed - dog will not automatically query the root nameservers.
 
-Query options passed in using a command-line option, such as ‘`--query lookup.dog`’ or ‘`--type MX`’, or as plain arguments, such as ‘`lookup.dog`’ or ‘`MX`’. dog will make an intelligent guess as to what plain arguments mean (`MX` is quite clearly a type), which makes it easier to compose ad-hoc queries quickly. If precision is desired, use the long-form options.
+Query options passed in using a command-line option, such as `--query lookup.dog` or `--type MX`, or as plain arguments, such as `lookup.dog` or `MX`. dog will make an intelligent guess as to what plain arguments mean (`MX` is quite clearly a type), which makes it easier to compose ad-hoc queries quickly. If precision is desired, use the long-form options.
 
 If more than one domain, type, nameserver, or class is specified, dog will perform one query for each combination, and display the combined results in a table. For example, passing three type arguments and two domain name arguments will send six requests.
 
@@ -67,7 +67,7 @@ SENDING OPTIONS
 ===============
 
 `--edns=SETTING`
-: Whether to opt in to DNS. This can be ‘`disable`’, ‘`hide`’, or ‘`show`’.
+: Whether to opt in to DNS. This can be `disable`, `hide`, or `show`.
 
 `--txid=NUMBER`
 : Set the transaction ID to a specific value.
@@ -110,7 +110,7 @@ OUTPUT OPTIONS
 : Display the output as JSON.
 
 `--color`, `--colour=WHEN`
-: When to colourise the output. This can be ‘`always`’, ‘`automatic`’, or ‘`never`’.
+: When to colourise the output. This can be `always`, `automatic`, or `never`.
 
 `--seconds`
 : Do not format durations as hours and minutes; instead, display them as seconds.
@@ -136,7 +136,7 @@ dog responds to the following environment variables:
 
 ## `DOG_DEBUG`
 
-Set this to any non-empty value to have dog emit debugging information to standard error. For more in-depth output, set this to the exact string ‘`trace`’.
+Set this to any non-empty value to have dog emit debugging information to standard error. For more in-depth output, set this to the exact string `trace`.
 
 
 RECORD TYPES
@@ -196,7 +196,7 @@ When a response DNS packet contains a record of one of these known types, dog wi
 
 Records with a type number that does not map to any known record type will still be displayed. As they cannot be interpreted, their contents will be displayed as a series of numbers instead.
 
-dog also contains a list of record type names that it knows the type number of, but is not able to interpret, such as `IXFR` or `ANY` or `AFSDB`. These are acceptable as command-line arguments, meaning you can send an AFSDB request with ‘`dog AFSDB`’. However, their response contents will still be displayed as numbers. They may be supported in future versions of dog.
+dog also contains a list of record type names that it knows the type number of, but is not able to interpret, such as `IXFR` or `ANY` or `AFSDB`. These are acceptable as command-line arguments, meaning you can send an AFSDB request with `dog AFSDB`. However, their response contents will still be displayed as numbers. They may be supported in future versions of dog.
 
 
 PROTOCOL TWEAKS
@@ -236,7 +236,7 @@ EXIT STATUSES
 AUTHOR
 ======
 
-dog is maintained by Benjamin ‘ogham’ Sago.
+dog is maintained by Benjamin `ogham` Sago.
 
 **Website:** `https://dns.lookup.dog/` \
 **Source code:** `https://github.com/ogham/dog`
