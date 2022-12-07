@@ -17,7 +17,7 @@ log = "0.4"
 native-tls = { version = "0.2", optional = true }
 
 # http response parsing
-httparse = { version = "1.3", optional = true }
+httparse = { version = "1.8", optional = true }
 
 [features]
 default = []  # these are enabled in the main dog crate
